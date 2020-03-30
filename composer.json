@@ -1,0 +1,41 @@
+{
+    "name": "abzudev/laravel-emails",
+    "type": "library",
+    "description": "Blade friendly email syntax for Laravel",
+    "keywords": ["emails", "blade", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abzu Development",
+            "email": "jeandrew.swart@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.8.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abzudev\\": "src/",
+            "Abzudev\\LaravelEmails\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Abzudev\\LaravelEmails\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abzudev\\LaravelEmails\\EmailsServiceProvider"
+            ]
+        }
+    }
+}
